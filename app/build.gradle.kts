@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.rickapi"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.rickapi"
@@ -33,9 +33,23 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
+
+    implementation(libs.glide)
+    implementation(libs.androidx.lifecycle.runtime)
+    implementation(libs.androidx.lifecycle.livedata)
+    implementation(libs.androidx.lifecycle.viewmodel)
+    implementation(libs.coroutinesCore)
+    implementation(libs.coroutinesAndroid)
+    implementation(libs.retrofit)
+    implementation(libs.gson)
+    implementation(libs.converter)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
